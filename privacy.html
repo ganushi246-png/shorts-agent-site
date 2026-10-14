@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy – Shorts Agent</title>
+<meta name="description" content="How Shorts Agent handles YouTube and Google account data.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="bar">
+  <a class="brand" href="./">Shorts Agent</a>
+  <nav><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a></nav>
+</div>
+<main>
+  <h1>Privacy Policy</h1>
+  <p class="meta">Shorts Agent · Last updated: 14 October 2026</p>
+
+  <div class="note">
+    <strong>In short:</strong> Shorts Agent only touches the YouTube channel of the person who runs it. It does not sell data, show ads or track visitors, and it shares Google user data with no one except Google's own Gemini API, as explained below.
+  </div>
+
+  <h2>1. Who operates Shorts Agent</h2>
+  <p>Shorts Agent ("the app") is a personal, non-commercial tool operated by the owner of the GitHub account <code>ganushi246-png</code> ("the operator"). It is used only by the operator, on the operator's own YouTube channel. It has no user accounts, no advertising and no tracking.</p>
+  <p>This website is a static page hosted on GitHub Pages. It has no forms, cookies or analytics of its own; GitHub may process technical data about visitors under its own privacy statement.</p>
+
+  <h2>2. What data the app accesses</h2>
+  <p>The app can reach only data in the Google account the operator connects, and only through the permissions (OAuth scopes) the operator approves on Google's consent screen:</p>
+  <ul>
+    <li><code>https://www.googleapis.com/auth/youtube.upload</code> – upload videos to the operator's channel and set their title, description, tags, thumbnail and visibility.</li>
+    <li><code>https://www.googleapis.com/auth/youtube.readonly</code> – read information about the operator's channel and videos (for example upload and processing status, public view counts and playlists), and search public YouTube videos to see how many similar Shorts already exist and how they perform (public counts only).</li>
+    <li><code>https://www.googleapis.com/auth/yt-analytics.readonly</code> – read YouTube Analytics reports for the operator's own channel (views, engaged views, watch time, average view duration, likes, comments, shares and subscriber changes per video).</li>
+    <li><code>https://www.googleapis.com/auth/youtube.force-ssl</code> – manage items on the operator's own channel: create playlists and add videos to them, upload subtitle (caption) tracks, post a comment from the operator's channel on the operator's own videos, and read public comments on the operator's own videos to find questions viewers ask.</li>
+  </ul>
+  <p>The app does not request access to Gmail, Google Drive, contacts, calendar, location or any other Google account data.</p>
+
+  <h2>3. How the data is used</h2>
+  <p>Data is used only to run the features the operator sees: producing and uploading videos on a schedule, adding them to playlists with subtitles and a first comment, producing a weekly performance report, and choosing better topics and opening lines based on what has worked on the operator's channel. It is not used for advertising, is not sold, and is not used to build profiles of people. The operator does not use it to develop or train AI models.</p>
+
+  <h2>4. Who the data is shared with</h2>
+  <p>The app does not sell or rent data and does not share Google user data with anyone, with these exceptions:</p>
+  <ul>
+    <li><strong>Google's Gemini API.</strong> To write scripts, the app sends text prompts to the Gemini API. A prompt can include a short summary of how the operator's own videos performed (for example which topic categories and opening lines held viewers best) and the text of questions that viewers wrote in public comments on the operator's videos, without the commenter's name or channel ID. Google processes this content under the <a href="https://ai.google.dev/gemini-api/terms">Gemini API terms</a>.</li>
+    <li><strong>GitHub.</strong> The app runs on GitHub Actions and keeps its working files in the operator's private GitHub repository (see section 5). GitHub processes that data as the host, under its own terms.</li>
+    <li><strong>Legal reasons.</strong> Data may be disclosed if the law requires it or to protect rights and safety.</li>
+  </ul>
+  <p>Other services the app uses, such as a stock-footage provider, receive only generic topic keywords, never Google account data.</p>
+
+  <h2>5. Storage, security and retention</h2>
+  <ul>
+    <li><strong>Credentials.</strong> The OAuth credentials that let the app act on the operator's channel are stored only as encrypted secrets in the operator's private GitHub repository. They are read only while a scheduled job runs, are never printed to logs and are never committed to the repository.</li>
+    <li><strong>Working data.</strong> An upload log, a weekly performance report, the text of selected viewer questions (without commenter names) and similar files are kept in the same private repository. Only the operator can open it.</li>
+    <li><strong>Retention.</strong> Data is kept for as long as the operator uses the app and is deleted when the operator deletes the files or the repository. Temporary video previews produced by a job are removed automatically by GitHub after 7 days.</li>
+  </ul>
+
+  <h2>6. Your choices</h2>
+  <ul>
+    <li><strong>Revoke access.</strong> The operator can withdraw the app's access at any time in the Google Account under Security, Third-party apps and services (<a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>). After that the app can no longer read or change anything on the channel, and the operator deletes the stored channel data and credentials promptly, and in any case within 7 days.</li>
+    <li><strong>Delete data.</strong> The operator can delete the stored credentials and files from the repository at any time.</li>
+    <li><strong>Commenters.</strong> If you commented on one of the operator's videos and want the text of your comment removed from the app's stored files, use the contact link below and it will be deleted.</li>
+  </ul>
+
+  <h2>7. Google API Services User Data Policy</h2>
+  <p>Shorts Agent's use and transfer to any other app of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+
+  <h2>8. YouTube API Services</h2>
+  <p>Shorts Agent uses YouTube API Services. By connecting a YouTube channel to the app, the operator agrees to be bound by the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>. How Google handles data is described in the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+
+  <h2>9. Children</h2>
+  <p>Shorts Agent is not directed at children and does not knowingly collect personal information from anyone under 13.</p>
+
+  <h2>10. Changes</h2>
+  <p>If this policy changes, the new version will be posted on this page with a new date.</p>
+
+  <h2>11. Contact</h2>
+  <p>Questions or requests about this policy or about data held by the app: <a href="https://github.com/ganushi246-png/shorts-agent-site/issues">open an issue on GitHub</a>. Issues are public, so please do not include sensitive personal details.</p>
+</main>
+<footer>
+  <p><a href="./">Home</a> · <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Service</a></p>
+</footer>
+</body>
+</html>
